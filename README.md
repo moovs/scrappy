@@ -1,1 +1,1 @@
-Python script which parses html of web-site and outputs quantities of repeating bugs in decending order.
+Python script which parses html of website and outputs quantities of repeating bugs in descending order.
