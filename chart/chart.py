@@ -5,7 +5,7 @@ import dash_html_components as html
 app = dash.Dash()
 
 app.layout = html.Div(children=[
-    html.H1(children='KDE Bugtracing System – Bug List'),
+    html.H1(children='KDE Bugtracking System – Bug List'),
 
 app.css.append_css({"external_url": "https://codepen.io/chriddyp/pen/bWLwgP.css"}),
 
