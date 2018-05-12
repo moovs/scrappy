@@ -37,4 +37,4 @@ for value in all:
 sorted_values = sorted(unique_values, key=unique_values.get, reverse=True)
 
 for key in sorted_values:
-    print(key +" | " + str(unique_values[key]) + " occurences;")
+    print(key + " | " + str(unique_values[key]) + " occurences;")
