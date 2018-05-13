@@ -12,10 +12,11 @@ data = response.text
 # Passing the source code to BeautifulSoup to create a BeautifulSoup object for it.
 html = BeautifulSoup(data, 'html.parser')
 
-# use only with raw files
-# raw_html = open('raw.html').read()
-# html = BeautifulSoup(raw_html, 'html.parser')
-
+'''
+use only with raw files
+raw_html = open('raw.html').read()
+html = BeautifulSoup(raw_html, 'html.parser')
+'''
 tds_products = html.findAll('td', {'class': 'bz_product_column nowrap'})
 tds_components = html.findAll('td', {'class': 'bz_component_column nowrap'})
 all = []
@@ -29,10 +30,6 @@ for value in all:
         unique_values[value] = 1;
     else:
         unique_values[value] += 1;
-
-# for key in unique_values:
-#     print(key + ": " + str(unique_values[key]) + " occurences;")
-# print(len(unique_values))
 
 sorted_values = sorted(unique_values, key=unique_values.get, reverse=True)
 
