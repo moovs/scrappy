@@ -17,9 +17,12 @@ use only with raw files
 raw_html = open('raw.html').read()
 html = BeautifulSoup(raw_html, 'html.parser')
 '''
+
 tds_products = html.findAll('td', {'class': 'bz_product_column nowrap'})
 tds_components = html.findAll('td', {'class': 'bz_component_column nowrap'})
+
 all = []
+
 for x in range(0, len(tds_products)):
     all.append(tds_products[x].text.strip() + " | " + tds_components[x].text.strip())
 
